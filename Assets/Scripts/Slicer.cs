@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Slicer : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class Slicer : MonoBehaviour
 	public int comboCount;
 	public float comboTimeLeft;
 	public List<AudioClip> comboSounds;
+	public TextMeshPro scoreText;
+	public int score = 0;
+
 
 	void Start()
 	{
@@ -18,7 +22,8 @@ public class Slicer : MonoBehaviour
 	void Update()
 	{
 		var worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		worldPos.z = 0;
+        scoreText.text = score.ToString();
+        worldPos.z = 0;
 
 		rb.MovePosition(worldPos);
 
@@ -42,5 +47,6 @@ public class Slicer : MonoBehaviour
 
 		comboCount++;
 		comboTimeLeft = 0.2f;
-	}
+        score++;
+    }
 }
