@@ -5725,7 +5725,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.101
+  m_Volume: 0.03
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5907,6 +5907,15 @@ MonoBehaviour:
       delay: 1
       x: 5
       velocity: {x: 0, y: 12}
+  - items:
+    - isBomb: 1
+      delay: 0
+      x: 0
+      velocity: {x: 0, y: 10}
+    - isBomb: 0
+      delay: 0
+      x: 0
+      velocity: {x: 0, y: 8}
   - items:
     - isBomb: 1
       delay: 0
